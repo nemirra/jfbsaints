@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Celsius Converter</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body style="background: url('bg.jpg')">
+<br>
+<br>
+<br>
+<br>
+<div class="container bg-primary rounded text-light">
+	<br>
+	<center>
+		<h1>Celsius Converter</h1>
+	</center>
+	<hr>
+	<h3>CELSIUS:</h3>
+	<input type="number" name="" id="numCel" class="form-control">
+	<hr>
+	<h3>CONVERT TO:</h3>
+	<select class="form-control" id="converTo">
+		<option>Rankine</option>
+		<option>Fahrenheit</option>
+		<option>Kelvin</option>
+	</select>
+	<br>
+	<br>
+	<button class="btn btn-block btn-danger" style="font-weight:bold;" onclick="conv()">CONVERT</button>
+	<br>
+</div>
+<script type="text/javascript">
+	function conv() {
+		var celNum = Number(document.getElementById('numCel').value);
+		var converTo = document.getElementById('converTo').value;
+
+		if (converTo == "Rankine") {
+			alert((celNum * 9/5) + 491.67);
+		}else if(converTo == "Fahrenheit"){
+			alert((celNum * 9/5) + 32);
+		}else if(converTo == "Kelvin"){
+			alert(celNum + 273.15);
+		}
+	}
+</script>
+</body>
+</html>

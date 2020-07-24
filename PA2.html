@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>To-Do List</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+</head>
+<body class="bg-info">
+<br>
+<br>
+<div class="container bg-white rounded">
+	<br><br><br><br>
+	<center><h1>TO DO LIST</h1></center>
+	<br>
+	<input type="text" id="inputList" class="form-control" name="" placeholder="Type Here...">
+	<br>
+	<button class="btn btn-primary btn-block" onclick="addList()"><b>ADD TO LIST</b></button>
+	<br>
+	<button class="btn btn-primary btn-block" onclick="viewList()"><b>VIEW LIST</b></button>
+	<br>
+</div>
+
+<script type="text/javascript">
+	var listContent = ["Wash the dishes", "Mop the floor", "Water the plants"];
+	
+	function addList() {
+		var inputList = document.getElementById("inputList").value;
+		listContent.push(inputList);
+		alert("Successfully Added in to do List");
+		
+	}
+
+	function viewList(){
+		for (var i = 0; i < listContent.length; i++) {
+			var browseList = window.open("", "To Do List", "width=200,height=500");
+			browseList.document.write("- " + listContent[i] + "<br>");
+		}
+	}
+</script>
+</body>
+</html>
+
